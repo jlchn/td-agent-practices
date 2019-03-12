@@ -45,5 +45,7 @@ https://groups.google.com/forum/#!topic/fluentd/vrMLwsBT4_I
 
 https://docs.fluentd.org/v0.12/articles/parser_multiline
 
+https://github.com/fluent/fluentd/pull/1416
+
 
 
