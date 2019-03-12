@@ -30,3 +30,20 @@ Solution could be:
 </match>
 ```
 
+### got incomplete line before first line from ...
+
+from the source codes of td-agent, we found this warning appear when parsing multiline logs, in our case, the gc logs.
+
+the multiple line got broken because of the the log rotation of gc logs, actually the the broken logs were already emitted.
+
+so it is not critical for us.
+
+
+https://github.com/fluent/fluentd/blob/v0.12.42/lib/fluent/plugin/in_tail.rb#L309
+
+https://groups.google.com/forum/#!topic/fluentd/vrMLwsBT4_I
+
+https://docs.fluentd.org/v0.12/articles/parser_multiline
+
+
+
