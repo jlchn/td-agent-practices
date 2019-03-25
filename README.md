@@ -1,3 +1,8 @@
+### td agent is tailing too manay files which reaches he upper limit of the file open number
+the app services was outputing too many logs that the td agent cannot tail anymore.
+
+we then add the `limit_recently_modified 3d` to the configuration to tail the recent 3 days logs.
+
 
 ### Size of the emitted data exceeds buffer_chunk_limit
 
