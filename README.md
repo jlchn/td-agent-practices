@@ -52,5 +52,7 @@ https://docs.fluentd.org/v0.12/articles/parser_multiline
 
 https://github.com/fluent/fluentd/pull/1416
 
+### the max size the td-agent will take in the buffer folder
 
+max_buffer_size = chunk_size * queue_length + chunk_size * log_type_size
 
