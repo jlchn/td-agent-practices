@@ -56,3 +56,19 @@ https://github.com/fluent/fluentd/pull/1416
 
 max_buffer_size = chunk_size * queue_length + chunk_size * log_type_size
 
+### debug 
+
+<source>
+ @type tail
+ path /var/log/test.log.*.current,/var/log/test.log
+ pos_file /var/log/td-agent/pos/test.pos
+ format none
+ time_format %Y-%m-%dT%H:%M:%S.%L%Z
+ time_key time
+ tag debug.test
+</source>
+
+<match debug.test>
+ @type stdout
+</match>
+
